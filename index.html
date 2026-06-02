@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>🐱</title>
+    <!-- Firebase SDK -->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <!-- ЕСЛИ ТЫ ЗАШЁЛ СЮДА И ВИДИШЬ ЭТОТ ТЕКСТ ТО ТЫ ЛОХ-->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(145deg, #ffe9f0, #ffded5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+            position: relative;
+        }
+
+        .window {
+            width: 100%;
+            max-width: 520px;
+            background: rgba(255, 250, 245, 0.97);
+            border-radius: 48px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            padding: 28px 20px 32px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hidden { display: none; }
+
+        .cat-mem {
+            width: 110px;
+            height: 110px;
+            border-radius: 60px;
+            object-fit: cover;
+            margin: 0 auto 12px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+            background: #fff2ea;
+            padding: 6px;
+        }
+
+        .btn {
+            width: 100%;
+            border: none;
+            border-radius: 60px;
+            padding: 14px 18px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.08s ease, box-shadow 0.08s ease;
+            margin-top: 12px;
+        }
+
+        .btn-primary {
+            background: #f8a5a5;
+            color: #3a1f1f;
+            box-shadow: 0 5px 0 #c26a6a;
+        }
+
+        .btn-secondary {
+            background: #e9d9d4;
+            color: #6b4a42;
+            box-shadow: 0 4px 0 #cbb0a8;
+        }
+
+        .btn:active {
+            transform: translateY(2px);
+            box-shadow: none !important;
+        }
+
+        .teleport-btn {
+            position: fixed !important;
+            width: auto !important;
+            min-width: 140px;
+            z-index: 9999;
+            transition: left 0.05s linear, top 0.05s linear;
+            white-space: nowrap;
+        }
+
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 18px 0;
+        }
+
+        .option-item {
+            background: #fff3ef;
+            border: 1px solid #ffe0d4;
+            border-radius: 60px;
+            padding: 12px 16px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: 0.1s;
+        }
+
+        .option-item.selected {
+            background: #ffcfc2;
+            border-color: #f28b82;
+        }
+
+        .summary {
+            font-size: 0.8rem;
+            background: #fff2ea;
+            padding: 10px;
+            border-radius: 30px;
+            margin: 12px 0 4px;
+        }
+
+        .step-counter {
+            font-size: 0.7rem;
+            background: #ffe0d4;
+            padding: 4px 14px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .bottom-row {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .bottom-row .btn {
+            flex: 1;
+            margin-top: 0;
+        }
+
+        .custom-calendar {
+            margin-top: 12px;
+            background: #fffaf5;
+            border-radius: 28px;
+            padding: 12px;
+            border: 1px solid #f0cdc0;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+        }
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .calendar-header button {
+            background: #f8e0d4;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        .weekdays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            text-align: center;
+            font-size: 0.7rem;
+            color: #a27a6a;
+            margin-bottom: 6px;
+        }
+        .calendar-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+        }
+        .cal-day {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            border-radius: 40px;
+            cursor: pointer;
+            background: #fff9f5;
+            transition: 0.1s;
+        }
+        .cal-day.selected {
+            background: #f8a5a5;
+            color: white;
+        }
+        .cal-day.other-month {
+            opacity: 0.3;
+            cursor: default;
+        }
+        .close-cal {
+            margin-top: 8px;
+            font-size: 0.7rem;
+            color: #b28a7a;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .date-trigger {
+            width: 100%;
+            padding: 12px;
+            border-radius: 60px;
+            border: 1px solid #f0cdc0;
+            background: #fffaf5;
+            font-size: 0.9rem;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ЭКРАН 1: ГЛАВНЫЙ -->
+<div id="mainWindow" class="window">
+    <img class="cat-mem" src="./1.gif" alt="мемный кот" onerror="this.src='https://placekitten.com/110/110'">
+    <h2>Мне кажется нам надо уже определиться со встречей</h2>
+    <p style="margin:10px 0 6px;">Там будет Максим, Валя, Лида, Егор, Алиса и Женя</p>
+    <button id="goBtn" class="btn btn-primary">😎 ПОЙДУ</button>
+    <button id="notGoBtn" class="btn btn-secondary teleport-btn">❌ НЕ ПРИДУ</button>
+</div>
+
+<!-- ЭКРАН 2: ДАТА -->
+<div id="dateWindow" class="window hidden">
+    <img class="cat-mem" src="./2.gif" alt="кот календарь" onerror="this.src='https://placekitten.com/100/100'">
+    <h3>Когда встречаемся?</h3>
+    <div class="options-list" id="dateOptionsList"></div>
+    
+    <div class="date-trigger" id="dateTrigger">📅 + выберу свою дату</div>
+    <div id="customCalendarPanel" class="custom-calendar" style="display: none;">
+        <div class="calendar-header">
+            <button id="prevMonthBtn">◀</button>
+            <span id="monthYearDisplay"></span>
+            <button id="nextMonthBtn">▶</button>
+        </div>
+        <div class="weekdays">
+            <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+        </div>
+        <div id="calendarDays" class="calendar-days"></div>
+        <div class="close-cal" id="closeCalendarBtn">✖ закрыть</div>
+    </div>
+
+    <div class="summary" id="dateSummary"></div>
+    <div class="bottom-row">
+        <button id="nextToPlaceBtn" class="btn btn-primary">дальше →</button>
+    </div>
+</div>
+
+<!-- ЭКРАН 3: МЕСТО -->
+<div id="placeWindow" class="window hidden">
+    <img class="cat-mem" src="./5.gif" alt="кот место" onerror="this.src='https://placekitten.com/100/100'">
+    <h3>Где встречаемся?</h3>
+    <div class="options-list" id="placeOptionsList"></div>
+    <div class="summary" id="placeSummary"></div>
+    <div class="bottom-row">
+        <button id="backToDateBtn" class="btn btn-secondary">← назад</button>
+        <button id="nextToActivityBtn" class="btn btn-primary">дальше →</button>
+    </div>
+</div>
+
+<!-- ЭКРАН 4: ЗАНЯТИЕ -->
+<div id="activityWindow" class="window hidden">
+    <img class="cat-mem" src="./4.gif" alt="кот занятие" onerror="this.src='https://placekitten.com/100/100'">
+    <h3>Чем займёмся?</h3>
+    <div class="options-list" id="activityOptionsList"></div>
+    <div class="summary" id="activitySummary"></div>
+    <div class="bottom-row">
+        <button id="backToPlaceBtn" class="btn btn-secondary">← назад</button>
+        <button id="finishBtn" class="btn btn-primary">готово</button>
+    </div>
+</div>
+
+<!-- ЭКРАН 5: СПАСИБО -->
+<div id="thanksWindow" class="window hidden">
+    <img class="cat-mem" src="./3.gif" alt="кот гиф" onerror="this.src='https://placekitten.com/100/100'">
+    <h2>Готово!</h2>
+    <p style="margin:12px 0;">Ты в списке. Скоро будет встреча.</p>
+    <!-- <button id="resetBtn" class="btn btn-secondary" style="margin-top: 20px;">сбросить всё (организатор)</button> -->
+</div>
+
+<script>
+    // ---------- FIREBASE КОНФИГ (ПРЯМО ИЗ URL) ----------
+    const firebaseConfig = {
+  apiKey: "AIzaSyDgNGR3R3UjCMM_YCxQTwcPuoQer_d02w8",
+  authDomain: "vstrecha-f0db1.firebaseapp.com",
+  databaseURL: "https://vstrecha-f0db1-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "vstrecha-f0db1",
+  storageBucket: "vstrecha-f0db1.firebasestorage.app",
+  messagingSenderId: "1048265879988",
+  appId: "1:1048265879988:web:8aad9a41d456ad2d6a42e1"
+};
+    
+    // Инициализация Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+    
+    // Уникальный ID устройства
+    let deviceId = localStorage.getItem("deviceId");
+    if(!deviceId) {
+        deviceId = "dev_" + Math.random().toString(36).substr(2, 16);
+        localStorage.setItem("deviceId", deviceId);
+    }
+    
+    // ---------- ДАННЫЕ ----------
+    let votes = { date: {}, place: {}, activity: {} };
+    let myChoice = { date: null, place: null, activity: null };
+    let customDateKey = null;
+    
+    // Дефолтные варианты
+    const defaultDates = ["Когда угодно", "Завтра", "На этой неделе", "На следующей неделе"];
+    const defaultPlaces = ["У Лиды", "У Вали", "У Егора", "В школе", "Где-то в другом месте"];
+    const defaultActivities = ["Настолки", "Просмотр чего-то на проекторе(Но только если в школе)", "Among Us", "Мне всё равно"];
+    
+    // Инициализация структуры голосов с дефолтными ключами
+    function initDefaultVotes() {
+        defaultDates.forEach(d => { if(votes.date[d] === undefined) votes.date[d] = 0; });
+        defaultPlaces.forEach(p => { if(votes.place[p] === undefined) votes.place[p] = 0; });
+        defaultActivities.forEach(a => { if(votes.activity[a] === undefined) votes.activity[a] = 0; });
+    }
+    
+    // Загрузка из Firebase
+    function loadFromFirebase() {
+        // Загружаем голоса
+        const votesRef = database.ref('votes');
+        votesRef.on('value', (snapshot) => {
+            const data = snapshot.val();
+            if(data) {
+                if(data.date) votes.date = { ...votes.date, ...data.date };
+                if(data.place) votes.place = { ...votes.place, ...data.place };
+                if(data.activity) votes.activity = { ...votes.activity, ...data.activity };
+            }
+            initDefaultVotes();
+            renderCurrentScreen();
+        });
+        
+        // Загружаем customDateKey
+        database.ref('customDateKey').on('value', (snap) => {
+            customDateKey = snap.val();
+            renderCurrentScreen();
+        });
+        
+        // Загружаем выбор пользователя
+        const userRef = database.ref('userChoices/' + deviceId);
+        userRef.on('value', (snapshot) => {
+            const data = snapshot.val();
+            if(data) {
+                myChoice = data;
+            }
+            renderCurrentScreen();
+        });
+    }
+    
+    // Сохранение голосов в Firebase
+    function saveVotesToFirebase() {
+        database.ref('votes').set({
+            date: votes.date,
+            place: votes.place,
+            activity: votes.activity
+        }).catch(err => console.warn("Ошибка записи:", err));
+        if(customDateKey) {
+            database.ref('customDateKey').set(customDateKey);
+        } else {
+            database.ref('customDateKey').remove();
+        }
+    }
+    
+    // Сохранение выбора пользователя
+    function saveUserChoiceToFirebase() {
+        database.ref('userChoices/' + deviceId).set(myChoice);
+    }
+    
+    // Голосование
+    function vote(category, optionValue, isCustom = false) {
+        let obj, myKey;
+        if(category === 'date') { obj = votes.date; myKey = 'date'; }
+        else if(category === 'place') { obj = votes.place; myKey = 'place'; }
+        else { obj = votes.activity; myKey = 'activity'; }
+        
+        if(category === 'date' && isCustom) {
+            if(customDateKey && customDateKey !== optionValue && obj[customDateKey] !== undefined) {
+                if(myChoice[myKey] === customDateKey) {
+                    if(obj[customDateKey] > 0) obj[customDateKey] -= 1;
+                    myChoice[myKey] = null;
+                }
+                delete obj[customDateKey];
+            }
+            customDateKey = optionValue;
+        }
+        
+        const old = myChoice[myKey];
+        if(old && obj[old] !== undefined && obj[old] > 0) obj[old] -= 1;
+        if(!obj[optionValue]) obj[optionValue] = 0;
+        obj[optionValue] += 1;
+        myChoice[myKey] = optionValue;
+        
+        saveVotesToFirebase();
+        saveUserChoiceToFirebase();
+        renderCurrentScreen();
+    }
+    
+    let currentScreen = 'date';
+    function renderCurrentScreen() {
+        if(currentScreen === 'date') renderDateScreen();
+        else if(currentScreen === 'place') renderPlaceScreen();
+        else if(currentScreen === 'activity') renderActivityScreen();
+    }
+    
+    function renderDateScreen() {
+        const container = document.getElementById("dateOptionsList");
+        if(!container) return;
+        container.innerHTML = "";
+        const allDates = { ...votes.date };
+        for(let [date, count] of Object.entries(allDates)) {
+            const div = document.createElement("div");
+            div.className = `option-item ${myChoice.date === date ? "selected" : ""}`;
+            div.innerHTML = `${date} <span style="font-size:0.7rem;">(${count})</span>`;
+            div.onclick = () => vote('date', date, false);
+            container.appendChild(div);
+        }
+        const summary = document.getElementById("dateSummary");
+        if(summary) {
+            let total = Object.values(votes.date).reduce((a,b)=>a+b,0);
+            summary.innerHTML = `🐾 голосов: ${total} · твой выбор: ${myChoice.date || "ещё нет"}`;
+        }
+    }
+    
+    function renderPlaceScreen() {
+        const container = document.getElementById("placeOptionsList");
+        container.innerHTML = "";
+        for(let [place, count] of Object.entries(votes.place)) {
+            const div = document.createElement("div");
+            div.className = `option-item ${myChoice.place === place ? "selected" : ""}`;
+            div.innerHTML = `${place} (${count})`;
+            div.onclick = () => vote('place', place);
+            container.appendChild(div);
+        }
+        const summary = document.getElementById("placeSummary");
+        if(summary) {
+            let total = Object.values(votes.place).reduce((a,b)=>a+b,0);
+            summary.innerHTML = `📍 голосов: ${total} · ты за: ${myChoice.place || "не выбран"}`;
+        }
+    }
+    
+    function renderActivityScreen() {
+        const container = document.getElementById("activityOptionsList");
+        container.innerHTML = "";
+        for(let [act, count] of Object.entries(votes.activity)) {
+            const div = document.createElement("div");
+            div.className = `option-item ${myChoice.activity === act ? "selected" : ""}`;
+            div.innerHTML = `${act} (${count})`;
+            div.onclick = () => vote('activity', act);
+            container.appendChild(div);
+        }
+        const summary = document.getElementById("activitySummary");
+        if(summary) {
+            let total = Object.values(votes.activity).reduce((a,b)=>a+b,0);
+            summary.innerHTML = `🎲 голосов: ${total} · ты: ${myChoice.activity || "не выбран"}`;
+        }
+    }
+    
+    // ---------- КАЛЕНДАРЬ ----------
+    let currentCalendarDate = new Date();
+    
+    function buildCalendar() {
+        const year = currentCalendarDate.getFullYear();
+        const month = currentCalendarDate.getMonth();
+        const firstDay = new Date(year, month, 1);
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        
+        let startOffset = firstDay.getDay();
+        startOffset = startOffset === 0 ? 6 : startOffset - 1;
+        
+        const monthNames = ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
+        document.getElementById("monthYearDisplay").innerText = `${monthNames[month]} ${year}`;
+        
+        const container = document.getElementById("calendarDays");
+        container.innerHTML = "";
+        let dayCounter = 1;
+        for(let i = 0; i < 42; i++) {
+            const cell = document.createElement("div");
+            cell.className = "cal-day";
+            if(i < startOffset || dayCounter > daysInMonth) {
+                cell.classList.add("other-month");
+                cell.innerText = "";
+            } else {
+                cell.innerText = dayCounter;
+                cell.onclick = (function(d, m, y) {
+                    return function() {
+                        const realDate = new Date(y, m, d);
+                        if(realDate.getMonth() !== m) return;
+                        const formatted = `${d} ${monthNames[m]} ${y}`;
+                        vote('date', `📅 ${formatted}`, true);
+                        document.getElementById("customCalendarPanel").style.display = "none";
+                    };
+                })(dayCounter, month, year);
+                dayCounter++;
+            }
+            container.appendChild(cell);
+        }
+    }
+    
+    document.getElementById("prevMonthBtn")?.addEventListener("click", () => {
+        currentCalendarDate.setMonth(currentCalendarDate.getMonth() - 1);
+        buildCalendar();
+    });
+    document.getElementById("nextMonthBtn")?.addEventListener("click", () => {
+        currentCalendarDate.setMonth(currentCalendarDate.getMonth() + 1);
+        buildCalendar();
+    });
+    document.getElementById("dateTrigger")?.addEventListener("click", () => {
+        const panel = document.getElementById("customCalendarPanel");
+        if(panel.style.display === "none") {
+            panel.style.display = "block";
+            currentCalendarDate = new Date();
+            buildCalendar();
+        } else {
+            panel.style.display = "none";
+        }
+    });
+    document.getElementById("closeCalendarBtn")?.addEventListener("click", () => {
+        document.getElementById("customCalendarPanel").style.display = "none";
+    });
+    
+    // ---------- ТЕЛЕПОРТ КНОПКИ ----------
+    const notGoBtn = document.getElementById("notGoBtn");
+    let teleportEnabled = true;
+    
+    function teleportFarAway() {
+        if(!notGoBtn || !teleportEnabled) return;
+        const maxX = window.innerWidth - notGoBtn.offsetWidth - 30;
+        const maxY = window.innerHeight - notGoBtn.offsetHeight - 30;
+        const randX = Math.random() * Math.max(50, maxX);
+        const randY = Math.random() * Math.max(50, maxY);
+        notGoBtn.style.left = `${Math.min(Math.max(randX, 10), window.innerWidth - notGoBtn.offsetWidth - 10)}px`;
+        notGoBtn.style.top = `${Math.min(Math.max(randY, 20), window.innerHeight - notGoBtn.offsetHeight - 20)}px`;
+        notGoBtn.style.position = "fixed";
+    }
+    
+    if(notGoBtn) {
+        notGoBtn.style.position = "fixed";
+        teleportFarAway();
+        document.body.addEventListener('mousemove', function(e) {
+            if(!notGoBtn) return;
+            const btnRect = notGoBtn.getBoundingClientRect();
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            const distance = Math.hypot(mouseX - (btnRect.left + btnRect.width/2), mouseY - (btnRect.top + btnRect.height/2));
+            if(distance < 80) teleportFarAway();
+        });
+        notGoBtn.addEventListener('mouseenter', teleportFarAway);
+        notGoBtn.addEventListener('touchstart', teleportFarAway);
+        notGoBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            teleportFarAway();
+            const msg = document.createElement('div');
+            msg.innerText = '😼 ну ты хитрый, приходи :)';
+            msg.style.position='fixed'; msg.style.bottom='80px'; msg.style.left='20px';
+            msg.style.background='#fcd5ce'; msg.style.padding='8px 16px'; msg.style.borderRadius='40px';
+            msg.style.zIndex='10000';
+            document.body.appendChild(msg);
+            setTimeout(()=>msg.remove(), 1500);
+        });
+    }
+    
+    // переключение окон
+    function showWindow(id) {
+        document.querySelectorAll(".window").forEach(w => w.classList.add("hidden"));
+        document.getElementById(id).classList.remove("hidden");
+        if(id === 'dateWindow') currentScreen = 'date';
+        if(id === 'placeWindow') currentScreen = 'place';
+        if(id === 'activityWindow') currentScreen = 'activity';
+        renderCurrentScreen();
+    }
+    
+    document.getElementById("goBtn").onclick = () => {
+        showWindow("dateWindow");
+    };
+    document.getElementById("nextToPlaceBtn").onclick = () => showWindow("placeWindow");
+    document.getElementById("backToDateBtn").onclick = () => showWindow("dateWindow");
+    document.getElementById("nextToActivityBtn").onclick = () => showWindow("activityWindow");
+    document.getElementById("backToPlaceBtn").onclick = () => showWindow("placeWindow");
+    document.getElementById("finishBtn").onclick = () => {
+        showWindow("thanksWindow");
+    };
+    document.getElementById("resetBtn")?.addEventListener("click", () => {
+        if(confirm("Сбросить все голоса? Это очистит Firebase для всех!")) {
+            database.ref('votes').set({
+                date: {},
+                place: {},
+                activity: {}
+            });
+            database.ref('userChoices').remove();
+            database.ref('customDateKey').remove();
+            localStorage.clear();
+            setTimeout(() => location.reload(), 500);
+        }
+    });
+    
+    // Инициализация
+    initDefaultVotes();
+    loadFromFirebase();
+    renderCurrentScreen();
+</script>
+</body>
+</html>
